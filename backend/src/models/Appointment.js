@@ -13,7 +13,7 @@ const appointmentSchema = new mongoose.Schema({
     enum: ["pending", "approved", "rejected"],
     default: "pending",
   },
-  createdAt: { type: Date, default: Date.now },
+  createdAt: { type: Date, default: Date.now, index:true },
 });
 
 module.exports = mongoose.model("Appointment", appointmentSchema);
